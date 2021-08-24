@@ -7,9 +7,11 @@ import br.com.jsr.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import java.util.List;
 
+@EnableSwagger2
 @RestController
 @RequestMapping("/api/v1/people")
 public class PersonController {

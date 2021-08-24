@@ -1,6 +1,7 @@
 package br.com.jsr.entity;
 
 
+import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -18,20 +19,26 @@ import java.util.List;
 public class Person {
 
         @Id
+        @ApiModelProperty(value = "ID")
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Long id;
 
+        @ApiModelProperty(value = "Primeiro Nome")
         @Column(nullable = false)
         private String firstName;
 
+        @ApiModelProperty(value = "Último Nome")
         @Column(nullable = false)
         private String lastName;
 
+        @ApiModelProperty(value = "CPF")
         @Column(nullable = false, unique = true)
         private String cpf;
 
+        @ApiModelProperty(value = "Data De Aniversario")
         private LocalDate birthDate;
 
+        @ApiModelProperty(value = "Telefones")
         @OneToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST,CascadeType.REMOVE,CascadeType.MERGE})
         private List<Phone> phones;
     }
