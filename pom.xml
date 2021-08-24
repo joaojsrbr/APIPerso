@@ -13,9 +13,8 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>jsr</name>
 	<description>API REST cadastro de usuário</description>
-	<properties>
-		<java.version>16</java.version>
-	</properties>
+
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
