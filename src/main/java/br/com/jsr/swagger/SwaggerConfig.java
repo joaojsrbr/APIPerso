@@ -54,7 +54,7 @@ public class SwaggerConfig {
                     .message("Error")
                     .build());
             add(new ResponseMessageBuilder()
-                    .code(404)
+                    .code(204)
                     .message("Excluído")
                     .build());
         }};
