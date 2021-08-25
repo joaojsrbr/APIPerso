@@ -11,8 +11,10 @@ Após executar o comando acima, basta apenas abrir o seguinte endereço e visual
 ```
 http://localhost:8082/api/v1/people
 ```
+```  
 http://localhost:8082/swagger-ui.html
-
+```
+  
 São necessários os seguintes pré-requisitos para a execução do projeto desenvolvido durante a aula:
 
 * Java 11 ou versões superiores.
@@ -26,7 +28,7 @@ São necessários os seguintes pré-requisitos para a execução do projeto dese
 * [Palheta de atalhos de comandos do Intellij](https://resources.jetbrains.com/storage/products/intellij-idea/docs/IntelliJIDEA_ReferenceCard.pdf)
 * [Site oficial do Spring](https://spring.io/)
 * [Site oficial do Spring Initialzr, para setup do projeto](https://start.spring.io/)
-* [Site oficial do Heroku](https://www.heroku.com/)
+* [Site oficial do Heroku]  ``` https://www.heroku.com/ ```
 * [Documentação oficial do Lombok](https://projectlombok.org/)
 * [Documentação oficial do Map Struct](https://mapstruct.org/)
 * [Referência para o padrão arquitetural REST](https://restfulapi.net/)
