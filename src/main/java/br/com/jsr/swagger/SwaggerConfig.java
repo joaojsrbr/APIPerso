@@ -49,6 +49,14 @@ public class SwaggerConfig {
                     .code(201)
                     .message("Criado!")
                     .build());
+            add(new ResponseMessageBuilder()
+                    .code(404)
+                    .message("Error")
+                    .build());
+            add(new ResponseMessageBuilder()
+                    .code(404)
+                    .message("Excluído")
+                    .build());
         }};
     }
 
