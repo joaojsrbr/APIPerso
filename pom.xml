@@ -14,7 +14,7 @@
 	<name>jsr</name>
 	<description>API REST cadastro de usuário</description>
 	<properties>
-		<java.version>${java.version}</java.version>
+		<java.version>11</java.version>
 	</properties>
 
 	<dependencies>
