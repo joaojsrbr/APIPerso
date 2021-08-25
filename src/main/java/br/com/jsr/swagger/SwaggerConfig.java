@@ -20,14 +20,14 @@ import java.util.List;
 
 
 @Configuration
-public class SpringFoxConfig  {
+public class SwaggerConfig {
 
     @Bean
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("br.com.jsr"))
-                .paths(PathSelectors.ant("/api/v1/*"))
+                .paths(PathSelectors.any())
                 .build()
                 .useDefaultResponseMessages(false)
                 .globalResponseMessage(RequestMethod.GET, responseMessageForGET());

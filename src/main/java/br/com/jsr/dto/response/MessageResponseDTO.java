@@ -1,4 +1,4 @@
-package br.com.jsr.dto;
+package br.com.jsr.dto.response;
 
 import lombok.Builder;
 import lombok.Data;
