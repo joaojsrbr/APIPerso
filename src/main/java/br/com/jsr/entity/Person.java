@@ -23,12 +23,12 @@ public class Person {
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Long id;
 
+        @Column(length = 20000)
         @ApiModelProperty(value = "Mensagens")
-        @Column(nullable = true)
         private String message;
 
+        @Column(length = 10000)
         @ApiModelProperty(value = "Url Foto")
-        @Column(nullable = true)
         private String urlfoto;
 
     }
