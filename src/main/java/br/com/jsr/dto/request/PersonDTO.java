@@ -23,5 +23,6 @@ public class PersonDTO {
     @Size(min = 2, max = 100)
     private String message;
 
+    private String urlfoto;
 
 }
