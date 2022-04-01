@@ -24,7 +24,7 @@ public class Person {
         private Long id;
 
         @ApiModelProperty(value = "Mensagens")
-        @Column(nullable = false)
+        @Column(nullable = true)
         private String message;
 
         @ApiModelProperty(value = "Url Foto")
