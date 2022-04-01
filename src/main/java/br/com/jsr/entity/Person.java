@@ -23,24 +23,11 @@ public class Person {
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Long id;
 
-        @ApiModelProperty(value = "Primeiro Nome")
+        @ApiModelProperty(value = "Mensagens")
         @Column(nullable = false)
-        private String firstName;
+        private String message;
 
-        @ApiModelProperty(value = "Último Nome")
-        @Column(nullable = false)
-        private String lastName;
 
-        @ApiModelProperty(value = "CPF")
-        @Column(nullable = false, unique = true)
-        private String cpf;
-
-        @ApiModelProperty(value = "Data De Aniversario")
-        private LocalDate birthDate;
-
-        @ApiModelProperty(value = "Telefones")
-        @OneToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST,CascadeType.REMOVE,CascadeType.MERGE})
-        private List<Phone> phones;
     }
 
 
