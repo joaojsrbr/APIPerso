@@ -15,7 +15,7 @@ import java.util.List;
 
 @EnableSwagger2
 @RestController
-@RequestMapping("/api/v1/people")
+@RequestMapping("/api/v1/message")
 @AllArgsConstructor(onConstructor = @__(@Autowired))
 public class PersonController {
 
