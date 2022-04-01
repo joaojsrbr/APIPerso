@@ -21,19 +21,7 @@ public class PersonDTO {
 
     @NotEmpty
     @Size(min = 2, max = 100)
-    private String firstName;
+    private String message;
 
-    @NotEmpty
-    @Size(min = 2, max = 100)
-    private String lastName;
 
-    @NotEmpty
-    @CPF
-    private String cpf;
-
-    private String birthDate;
-
-    @Valid
-    @NotEmpty
-    private List<PhoneDTO> phones;
 }

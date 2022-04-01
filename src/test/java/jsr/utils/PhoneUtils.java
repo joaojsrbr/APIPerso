@@ -1,9 +1,5 @@
 package jsr.utils;
 
-import br.com.jsr.dto.request.PhoneDTO;
-import br.com.jsr.entity.Phone;
-import br.com.jsr.enums.PhoneType;
-
 public class PhoneUtils {
 
     private static final String PHONE_NUMBER = "1199999-9999";
