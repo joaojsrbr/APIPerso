@@ -27,6 +27,9 @@ public class Person {
         @Column(nullable = false)
         private String message;
 
+        @ApiModelProperty(value = "Url Foto")
+        @Column(nullable = true)
+        private String urlfoto;
 
     }
 
