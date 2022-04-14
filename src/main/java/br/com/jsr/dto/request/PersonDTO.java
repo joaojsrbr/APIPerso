@@ -19,7 +19,6 @@ public class PersonDTO {
 
     private Long id;
 
-
     private String message;
 
     private String urlfoto;
