@@ -12,6 +12,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.sql.Date;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -49,7 +50,10 @@ public class Person {
         @Lob
         @DateTimeFormat(pattern = "dd-MM-yyyy")
         @ApiModelProperty(value = "data")
-        private LocalDateTime data;
+        @Basic(optional = false)
+        @Column(insertable = false, updatable = false)
+        @Temporal(TemporalType.TIMESTAMP)
+        private Date data;
 
     }
 
