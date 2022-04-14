@@ -50,7 +50,6 @@ public class Person {
         @Lob
         @DateTimeFormat(pattern = "dd-MM-yyyy")
         @ApiModelProperty(value = "data")
-        @Basic(optional = false)
         @Column(insertable = false, updatable = false)
         @Temporal(TemporalType.TIMESTAMP)
         private LocalDateTime data;
