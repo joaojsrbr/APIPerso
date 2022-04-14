@@ -24,7 +24,6 @@ import java.time.LocalTime;
 public class Person {
 
         @Id
-        @Lob
         @ApiModelProperty(value = "ID")
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Long id;
@@ -48,8 +47,6 @@ public class Person {
 
 
         @Lob
-        @Column(unique = true)
-        @CreationTimestamp
         @DateTimeFormat(pattern = "dd-MM-yyyy")
         @ApiModelProperty(value = "data")
         private LocalDateTime data;
