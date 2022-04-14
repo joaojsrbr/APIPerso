@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
 import org.springframework.format.annotation.DateTimeFormat;
 
 
@@ -40,14 +41,15 @@ public class Person {
         @ApiModelProperty(value = "Url Foto")
         private String urlfoto;
 
-        @NotNull
-        @Lob
-        @ApiModelProperty(value = "horario")
-        private LocalTime horario;
 
-        @NotNull
+//        @Lob
+//        @ApiModelProperty(value = "horario")
+//        private LocalTime horario;
+
+
         @Lob
         @Column(unique = true)
+        @CreationTimestamp
         @DateTimeFormat(pattern = "dd-MM-yyyy")
         @ApiModelProperty(value = "data")
         private LocalDateTime data;
