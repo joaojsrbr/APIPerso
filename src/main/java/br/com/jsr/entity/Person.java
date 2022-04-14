@@ -53,7 +53,7 @@ public class Person {
         @Basic(optional = false)
         @Column(insertable = false, updatable = false)
         @Temporal(TemporalType.TIMESTAMP)
-        private Date data;
+        private LocalDateTime data;
 
     }
 
