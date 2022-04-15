@@ -49,10 +49,9 @@ public class Person {
 
 
         @Lob
-        @CreationTimestamp
-        @Column(updatable = false)
         @DateTimeFormat(pattern = "dd-MM-yyyy")
         @ApiModelProperty(value = "data")
+        @GeneratedValue(strategy = GenerationType.AUTO)
         private LocalDateTime data;
 
     }
