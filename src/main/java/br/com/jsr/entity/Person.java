@@ -52,8 +52,9 @@ public class Person {
         @Lob
         @DateTimeFormat(pattern = "dd-MM-yyyy")
         @ApiModelProperty(value = "data")
-        @CreatedDate
-        private Date data;
+        @Column(updatable = false)
+        @CreationTimestamp
+        private LocalDate data;
 
     }
 
