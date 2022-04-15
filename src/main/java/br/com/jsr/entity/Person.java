@@ -54,7 +54,7 @@ public class Person {
         @ApiModelProperty(value = "data")
         @Column(updatable = false)
         @CreationTimestamp
-        private LocalDate data;
+        private LocalDateTime data;
 
     }
 
