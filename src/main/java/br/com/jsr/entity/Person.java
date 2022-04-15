@@ -53,7 +53,6 @@ public class Person {
         @DateTimeFormat(pattern = "dd-MM-yyyy")
         @ApiModelProperty(value = "data")
         @CreatedDate
-        @Column(nullable = false, updatable = false)
         private Date data;
 
     }
