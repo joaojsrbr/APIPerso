@@ -23,7 +23,8 @@ import java.time.LocalTime;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Person {
-
+        
+        @Lob
         @Id
         @ApiModelProperty(value = "ID")
         @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -48,10 +49,9 @@ public class Person {
 
 
         @Lob
+        @CreationTimestamp
         @DateTimeFormat(pattern = "dd-MM-yyyy")
         @ApiModelProperty(value = "data")
-        @Column(insertable = false, updatable = false)
-        @Temporal(TemporalType.TIMESTAMP)
         private LocalDateTime data;
 
     }
