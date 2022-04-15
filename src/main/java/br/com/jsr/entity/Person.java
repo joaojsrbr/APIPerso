@@ -7,15 +7,16 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
+import org.springframework.data.annotation.CreatedDate;
 import org.springframework.format.annotation.DateTimeFormat;
 
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import java.sql.Date;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.util.Date;
 
 @Entity
 @Data
@@ -51,8 +52,9 @@ public class Person {
         @Lob
         @DateTimeFormat(pattern = "dd-MM-yyyy")
         @ApiModelProperty(value = "data")
-        @GeneratedValue(strategy = GenerationType.AUTO)
-        private LocalDateTime data;
+        @CreatedDate
+        @Column(nullable = false, updatable = false)
+        private Date data;
 
     }
 
