@@ -8,11 +8,7 @@ mvn spring-boot:run
 Após executar o comando acima, basta apenas abrir o seguinte endereço e visualizar a execução do projeto:
 
   
-```
-http://localhost:8082/api/v1
-  
-http://localhost:8082/swagger-ui.html
-```
+
   
 São necessários os seguintes pré-requisitos para a execução do projeto desenvolvido durante a aula:
   
