@@ -9,7 +9,7 @@ Após executar o comando acima, basta apenas abrir o seguinte endereço e visual
 
   
 ```
-http://localhost:8082/api/v1/people
+http://localhost:8082/api/v1
   
 http://localhost:8082/swagger-ui.html
 ```
