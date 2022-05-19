@@ -6,17 +6,10 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.CreationTimestamp;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.format.annotation.DateTimeFormat;
-
 
 import javax.persistence.*;
-//import javax.validation.constraints.NotNull;
-//import java.time.LocalDate;
-import java.time.LocalDateTime;
-//import java.time.LocalTime;
-//import java.util.Date;
+import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Data
@@ -25,37 +18,29 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class Person {
 
-
         @Id
         @ApiModelProperty(value = "ID")
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Long id;
 
-        @Lob
-        @ApiModelProperty(value = "titulo")
-        private String titulo;
+        @ApiModelProperty(value = "Primeiro Nome")
+        @Column(nullable = false)
+        private String firstName;
 
-        @Lob
-        @ApiModelProperty(value = "message")
-        private String message;
+        @ApiModelProperty(value = "Último Nome")
+        @Column(nullable = false)
+        private String lastName;
 
-        @Lob
-        @ApiModelProperty(value = "Url Foto")
-        private String urlfoto;
+        @ApiModelProperty(value = "CPF")
+        @Column(nullable = false, unique = true)
+        private String cpf;
 
+        @ApiModelProperty(value = "Data De Aniversario")
+        private LocalDate birthDate;
 
-//        @Lob
-//        @ApiModelProperty(value = "horario")
-//        private LocalTime horario;
-
-
-        @Lob
-        @DateTimeFormat(pattern = "dd-MM-yyyy")
-        @ApiModelProperty(value = "data")
-        @Column(updatable = false)
-        @CreationTimestamp
-        private LocalDateTime data;
-
+        @ApiModelProperty(value = "Telefones")
+        @OneToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST,CascadeType.REMOVE,CascadeType.MERGE})
+        private List<Phone> phones;
     }
 
 
