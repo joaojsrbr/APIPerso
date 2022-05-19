@@ -1,7 +1,6 @@
 <h2>Para executar o projeto no terminal, digite o seguinte comando<h2>
   
 ```
-shell script
 mvn spring-boot:run 
 ```
   
