@@ -10,11 +10,9 @@ Após executar o comando acima, basta apenas abrir o seguinte endereço e visual
 ```
 <<<<<<< Pull_Request
 http://localhost:8080/api/v1/
-=======
-http://localhost:8082/api/v1
-  
+ou
 http://localhost:8082/swagger-ui.html
->>>>>>> master
+
 ```
 
   
