@@ -2,21 +2,20 @@ package br.com.jsr.entity;
 
 
 import io.swagger.annotations.ApiModelProperty;
-import lombok.*;
-import org.hibernate.Hibernate;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
+
 import java.sql.Date;
-import java.util.Objects;
 
 
 @Entity
-@Getter
-@Setter
-@ToString
-@RequiredArgsConstructor
+@Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
@@ -52,19 +51,6 @@ public class Person {
 //        @ApiModelProperty(value = "Telefones")
 //        @OneToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST,CascadeType.REMOVE,CascadeType.MERGE})
 //        private List<Phone> phones;
-
-        @Override
-        public boolean equals(Object o) {
-                if (this == o) return true;
-                if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
-                Person person = (Person) o;
-                return id != null && Objects.equals(id, person.id);
-        }
-
-        @Override
-        public int hashCode() {
-                return getClass().hashCode();
-        }
-}
+    }
 
 
