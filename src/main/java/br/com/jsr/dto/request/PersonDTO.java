@@ -22,7 +22,7 @@ public class PersonDTO {
     private Long id;
     private String firstName;
     private String lastName;
-    private String cpf;
-    private LocalDate birthDate;
+//    private String cpf;
+//    private LocalDate birthDate;
 
 }
