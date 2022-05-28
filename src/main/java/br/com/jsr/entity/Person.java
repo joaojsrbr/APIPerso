@@ -38,9 +38,9 @@ public class Person {
         @ApiModelProperty(value = "Data De Aniversario")
         private LocalDate birthDate;
 
-        @ApiModelProperty(value = "Telefones")
-        @OneToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST,CascadeType.REMOVE,CascadeType.MERGE})
-        private List<Phone> phones;
+//        @ApiModelProperty(value = "Telefones")
+//        @OneToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST,CascadeType.REMOVE,CascadeType.MERGE})
+//        private List<Phone> phones;
     }
 
 
