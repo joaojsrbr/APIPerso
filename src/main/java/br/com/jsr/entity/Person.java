@@ -10,8 +10,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
-
-import java.sql.Date;
+import java.util.Date;
 
 
 @Entity
@@ -38,15 +37,15 @@ public class Person {
 //        @Column(nullable = false, unique = true)
 //        private String cpf;
 
-        @CreationTimestamp
-        @Temporal(TemporalType.TIMESTAMP)
-        @Column(name = "create_date")
-        private Date createDate;
-
-        @UpdateTimestamp
-        @Temporal(TemporalType.TIMESTAMP)
-        @Column(name = "modify_date")
-        private Date modifyDate;
+//        @CreationTimestamp
+//        @Temporal(TemporalType.TIMESTAMP)
+////        @Column(name = "create_date")
+//        private Date createDate;
+//
+//        @UpdateTimestamp
+//        @Temporal(TemporalType.TIMESTAMP)
+////        @Column(name = "modify_date")
+//        private Date modifyDate;
 
 //        @ApiModelProperty(value = "Telefones")
 //        @OneToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST,CascadeType.REMOVE,CascadeType.MERGE})
